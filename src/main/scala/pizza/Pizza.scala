@@ -5,7 +5,7 @@ import scala.collection.mutable.ArrayBuffer
 class Pizza (
     var crustSize: CrustSize,
     var crustType: CrustType,
-    val toppings: ArrayBuffer[Topping]
+    val toppings: ArrayBuffer[Topping],
 ) {
 
     def addTopping(t: Topping): Unit = { toppings += t }
@@ -16,18 +16,10 @@ class Pizza (
         val toppingsString = for (t <- toppings) yield t
         s"""
            |Pizza:
-           |  Crust Size: $crustSize
-           |  Crust Type: $crustType
-           |  $toppingsString
-         """.stripMargin
+           |Crust Size: $crustSize
+           |Crust Type: $crustType
+           |$toppingsString""".stripMargin
     }
-
-    def getPrice(
-        toppingsPrices: Map[Topping, Int],
-        crustSizePrices: Map[CrustSize, Int],
-        crustTypePrices: Map[CrustType, Int]
-    ): Int = ???
-
 }
 
 

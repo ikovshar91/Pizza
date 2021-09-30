@@ -35,17 +35,22 @@ object MainDriver extends App {
         customer
     )
 
+    val kek2 = new Pizza(SmallCrustSize,ThickCrustType,ArrayBuffer(Pepperoni))
+
+    val kek = new Order(ArrayBuffer(new Pizza(SmallCrustSize,ThickCrustType,ArrayBuffer(Pepperoni))),
+        new Customer("Igor Kovshar","8-983-520-29-04",
+        address))
+
     o.addPizza(
         new Pizza (
             SmallCrustSize,
-            ThinCrustType,
+            RegularCrustType,
             ArrayBuffer(Cheese, Mushrooms)
         )
     )
 
-    // print the order
-    o.printOrder
-
+    o.printOrder()
+    kek.printOrder()
 
 }
 

@@ -8,8 +8,7 @@ class Customer (
     s"""
        |Name: $name
        |Phone: $phone
-       |Address: $address
-       |""".stripMargin
+       |Address: $address""".stripMargin
 }
 
 
