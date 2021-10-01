@@ -56,6 +56,10 @@ class Order (
     }
 
     def SumPrice(): ArrayBuffer[Double] = {
+
+
+
+
         var sumPrice = ArrayBuffer[Double]()
         for(p <- pizzas.indices) {
             val basePrice = getBasePrice().zipWithIndex.apply(p)._1
