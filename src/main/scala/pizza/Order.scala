@@ -56,17 +56,13 @@ class Order (
     }
 
     def SumPrice(): ArrayBuffer[Double] = {
-
-
-
-
-        var sumPrice = ArrayBuffer[Double]()
+        val sumPrice = ArrayBuffer[Double]()
         for(p <- pizzas.indices) {
             val basePrice = getBasePrice().zipWithIndex.apply(p)._1
             val Nolog = getPlatiNOLOG().zipWithIndex.apply(p)._1
             sumPrice ++= ArrayBuffer(basePrice+Nolog)
         }
-     sumPrice
+        sumPrice
     }
 
     def printOrder(): Unit = {
@@ -77,7 +73,7 @@ class Order (
                 println(s"NOLOG: ${getPlatiNOLOG().zipWithIndex.apply(i)._1}")
                 print(s"Price: ${SumPrice().zipWithIndex.apply(i)._1}")
                 i+=1
-                print(p +"\n")
+                print(p+"\n")
             }
         }
 }
